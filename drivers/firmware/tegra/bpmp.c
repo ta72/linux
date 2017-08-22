@@ -824,6 +824,8 @@ static int tegra_bpmp_probe(struct platform_device *pdev)
 	if (err < 0)
 		goto free_mrq;
 
+	(void)tegra_bpmp_init_debugfs(bpmp);
+
 	return 0;
 
 free_mrq:
